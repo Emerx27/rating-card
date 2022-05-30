@@ -6,7 +6,6 @@ function iniciarApp() {
     buttons();
     color();
     submit();
-    error();
 }
 
 const rate = document.querySelectorAll(".rate");
