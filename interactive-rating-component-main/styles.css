@@ -1,0 +1,174 @@
+:root {
+    --White: rgb(255, 255, 255);
+    --Lightgray: rgb(149, 158, 172);
+    --Mediumgrey: rgb(124, 135, 152);
+    --Darkblue: rgb(25, 32, 42);
+    --Verydarkblue: rgb(18, 20, 23);
+    --gray: rgb(38, 47, 56);
+    --orange: rgb(255, 165, 0);
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img {
+   width: 100%
+}
+
+p {
+    line-height: 1.6;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--Verydarkblue);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+}
+
+input {
+    border: none;
+}
+.contenedor {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.btn {
+    background-color: var(--orange);
+    display: block;
+    padding: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--White);
+    letter-spacing: .25rem;
+    border-radius: 10rem;
+    transition: .3s all ease-in-out;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: var(--White);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.star {
+    max-width: 1.5rem;
+}
+
+.star-bg {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--gray);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.pad {
+    padding: 2rem;
+}
+
+.card,
+.card-thanks {
+    background-color: var(--Darkblue);
+    max-width: 40rem;
+    border-radius: 2.5rem;
+}
+
+.card-info {
+    padding: 2.5rem;
+}
+
+.card-thanks .card-info {
+    text-align: center;
+}
+.thanks-texto {
+    color: var(--Lightgray);
+}
+
+.card-info h1 {
+    color: var(--White);
+}
+
+.card .card-info p {
+    color: var(--Mediumgrey);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.rate-icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+    gap: 1rem;
+}
+
+.rate {
+    background-color: var(--gray);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    color: var(--Lightgray);
+    transition: .3s all ease-in-out;
+    line-height: 5rem;
+}
+
+.rate:hover {
+    background-color: var(--orange);
+    cursor: pointer;
+    color: var(--White);
+}
+
+.card-thanks img {
+    width: 20rem;
+    margin: 0 auto 3rem auto;
+    display: block;
+}
+
+.gris {
+    background-color: var(--Lightgray);
+    color: var(--White);
+}
+
+.none {
+    display: none;
+}
+
+.valor {
+    color: var(--orange);
+    background-color:var(--gray);
+    padding: .5rem 1.5rem;
+    border-radius: 5rem;
+    font-weight: normal;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+}
+
+.alerta {
+    background-color: var(--gray);
+    color: var(--White);
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    padding: 2rem;
+    right: 0;
+    border-bottom: 2px solid var(--orange);
+}
