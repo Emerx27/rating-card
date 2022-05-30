@@ -6,6 +6,7 @@ function iniciarApp() {
     buttons();
     color();
     submit();
+    error();
 }
 
 const rate = document.querySelectorAll(".rate");
@@ -34,20 +35,24 @@ function submit() {
     const cardThanks = document.querySelector(".card-thanks");
     const cardRate = document.querySelector(".card");
     const submit = document.querySelector(".formulario");
-    const body = document.querySelector("body");
     submit.addEventListener("submit", function(e) {
         e.preventDefault();
         if(result.classList.contains("valor")) {
             cardThanks.classList.remove("none");
             cardRate.classList.add("none");
         } else {
-            const alert = document.createElement("P");
-            alert.textContent = "Please choose a number from 1 to 5";
-            alert.classList.add("alerta");
-            body.appendChild(alert);
-            setTimeout(() => {
-                alert.remove();
-            }, 5000);
+            error();
         }
     });
+}
+
+function error() {
+    const body = document.querySelector("body");
+    const alert = document.createElement("P");
+    alert.textContent = "Please choose a number from 1 to 5";
+    alert.classList.add("alerta");
+    body.appendChild(alert);
+    setTimeout(() => {
+        alert.remove();
+    }, 5000);
 }
